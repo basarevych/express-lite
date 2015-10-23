@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+/**
+ * Start web server
+ */
+
+'use strict'
+
+var app = require('../app');
+var locator = require('node-service-locator');
+
+var httpServer = locator.get('http-server');
+httpServer.start();
+console.log("=> HTTP server started, " + locator.get('hostname') + ':' + locator.get('port'));
+locator.register('http-server', httpServer);

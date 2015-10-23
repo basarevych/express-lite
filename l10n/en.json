@@ -1,0 +1,34 @@
+{
+    "en": {
+        "APP_TITLE": "ExpressLite",
+        "HTTP_400": "Invalid request parameters",
+        "HTTP_401": "Authentication is required",
+        "HTTP_403": "Access to requested resource is denied",
+        "HTTP_404": "Requested resource is not found",
+        "HTTP_405": "Requested method is not implemented",
+        "HTTP_500": "Please try again later",
+
+        "en": "English",
+
+        "ERROR_OPERATION_FAILED": "Operation failed",
+
+        "REQUIRED_FIELD": "REQUIRED FIELD",
+        "INVALID_CREDENTIALS": "Invalid email or passsword",
+        "VALIDATOR_REQUIRED_FIELD": "Value is required",
+        "VALIDATOR_INPUT_MISMATCH": "The two values do not match",
+        "VALIDATOR_MIN_LENGTH": "The input must be at least {min} character(s)",
+        "VALIDATOR_EMAIL": "The input must be an email address",
+        "VALIDATOR_RECORD_EXISTS": "Value is already present in the database",
+
+        "OK_BUTTON": "OK",
+        "CANCEL_BUTTON": "Cancel",
+        "CLOSE_BUTTON": "Close",
+        "SAVE_CHANGES_BUTTON": "Save changes",
+        "CREATE_BUTTON": "Create",
+
+        "SIGN_IN_TITLE": "Sign in",
+        "USERNAME_LABEL": "Email",
+        "PASSWORD_LABEL": "Password",
+        "SIGN_IN_BUTTON": "Sign in"
+    }
+}

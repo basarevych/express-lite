@@ -1,0 +1,11 @@
+[Service]
+ExecStart=/usr/bin/node /home/express-lite/bin/server
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=node
+User=node
+Group=node
+
+[Install]
+WantedBy=multi-user.target
