@@ -1,0 +1,10 @@
+{
+  "name": "express-lite",
+  "version": "0.0.0",
+  "private": true,
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "moment": "~2.10.6",
+    "bootstrap": "~3.3.5"
+  }
+}

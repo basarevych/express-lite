@@ -8,11 +8,11 @@ module.exports = function (app) {
     return {
         services: {
             "http-server": {
-                path: "services/http-server.js",
+                path: "app/services/http-server.js",
                 instantiate: true,
             },
             "user-repository": {
-                path: "repositories/user.js",
+                path: "app/repositories/user.js",
                 instantiate: true,
             },
         },

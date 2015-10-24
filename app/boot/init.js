@@ -10,14 +10,14 @@ var path = require('path');
 var merge = require('merge');
 
 module.exports = function (app) {
-    var dir = path.join(__dirname, '..', 'config');
+    var dir = path.join(__dirname, '..', '..', 'config');
     var config = {};
     fs.readdirSync(dir).forEach(function (name) {
         var obj = require(dir + '/' + name)(app);
         config = merge(config, obj);
     });
 
-    var dir = path.join(__dirname, '..');
+    var dir = path.join(__dirname, '..', '..');
     locator.init(config['services'], dir);
 
     // initial services

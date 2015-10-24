@@ -17,7 +17,7 @@ var cookieParser = require('cookie-parser');
 
 // check .env file presence
 try {
-    var fd = fs.openSync(__dirname + "/.env", "r");
+    var fd = fs.openSync(path.join(__dirname, "..", ".env"), "r");
     fs.closeSync(fd);
 } catch (err) {
     console.log("Could not open .env file");
@@ -64,8 +64,8 @@ if (process.env.NODE_ENV != 'test') app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(favicon(path.join(__dirname, '..', 'public', 'img', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 // load application
 require('./boot/init.js')(app);         // initialize the app

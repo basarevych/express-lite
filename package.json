@@ -15,7 +15,7 @@
     "globalize": "~1.1.0-rc.5",
     "jade": "~1.11.0",
     "merge": "~1.2.0",
-    "moment-timezone": "^0.4.0",
+    "moment-timezone": "~0.4.0",
     "morgan": "~1.6.1",
     "node-service-locator": "~0.0.2",
     "q": "~1.4.1",
@@ -23,9 +23,5 @@
     "session-file-store": "~0.0.16",
     "tracer": "~0.8.1",
     "validator": "~4.2.0"
-  },
-  "devDependencies": {
-    "jasmine-node": "~1.14.5",
-    "supertest": "~1.1.0"
   }
 }

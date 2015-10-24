@@ -22,17 +22,17 @@ module.exports = function () {
         var globalize = require('globalize');
 
         globalize.load(
-            require("../node_modules/cldr-data/supplemental/currencyData"),
-            require("../node_modules/cldr-data/supplemental/likelySubtags"),
-            require("../node_modules/cldr-data/supplemental/plurals"),
-            require("../node_modules/cldr-data/supplemental/timeData"),
-            require("../node_modules/cldr-data/supplemental/weekData"),
-            require("../node_modules/cldr-data/main/" + locale + "/ca-gregorian"),
-            require("../node_modules/cldr-data/main/" + locale + "/currencies"),
-            require("../node_modules/cldr-data/main/" + locale + "/dateFields"),
-            require("../node_modules/cldr-data/main/" + locale + "/numbers")
+            require("../../node_modules/cldr-data/supplemental/currencyData"),
+            require("../../node_modules/cldr-data/supplemental/likelySubtags"),
+            require("../../node_modules/cldr-data/supplemental/plurals"),
+            require("../../node_modules/cldr-data/supplemental/timeData"),
+            require("../../node_modules/cldr-data/supplemental/weekData"),
+            require("../../node_modules/cldr-data/main/" + locale + "/ca-gregorian"),
+            require("../../node_modules/cldr-data/main/" + locale + "/currencies"),
+            require("../../node_modules/cldr-data/main/" + locale + "/dateFields"),
+            require("../../node_modules/cldr-data/main/" + locale + "/numbers")
         );
-        globalize.loadMessages(require("../l10n/" + locale));
+        globalize.loadMessages(require("../../l10n/" + locale));
         globalize.locale(locale);
 
         locales[locale] = globalize;
