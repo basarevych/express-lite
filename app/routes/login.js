@@ -12,11 +12,8 @@ module.exports = function () {
     var app = locator.get('app');
 
     router.get('/', function (req, res) {
-        if (typeof req.session.user_id == 'undefined')
-            return res.redirect('/login');
-
-        res.render('index');
+        res.render('login');
     });
 
-    app.use('/', router);
+    app.use('/login', router);
 };
