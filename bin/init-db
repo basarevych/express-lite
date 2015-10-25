@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+
+/**
+ * Start web server
+ */
+
+'use strict'
+
+process.env.CONSOLE = true;
+
+var app = require('../app/app');
+var locator = require('node-service-locator');
+var readline = require('readline');
+var UserModel = require('../app/models/user');
+
+var userRepo = locator.get('user-repository');
+var rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+rl.write("==> Initializing the database\n");
+rl.question("-> Administrator email? ", function (email) {
+    rl.question("-> Administrator password? ", function (password) {
+        var userRepo = locator.get('user-repository');
+        userRepo.findByEmail(email)
+            .then(function (users) {
+                var user = users.length && users[0];
+                if (!user) {
+                    user = new UserModel();
+                    user.setName('Admin');
+                    user.setEmail(email);
+                    user.setIsAdmin(true);
+                }
+
+                user.setPassword(UserModel.encryptPassword(password));
+                user.save()
+                    .then(function (userId) {
+                        rl.close();
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                        process.exit(1);
+                    });
+            })
+            .catch(function (err) {
+                console.error(err);
+                process.exit(1);
+            });
+    })
+});

@@ -6782,12 +6782,12 @@ body.login form {
   display: table;
   position: absolute;
 }
-.centered {
+.centered-wrapper .centered {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-.centered > * {
+.centered-wrapper .centered > * {
   text-align: left;
 }
 .required-marker {
