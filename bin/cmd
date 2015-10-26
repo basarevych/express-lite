@@ -42,9 +42,12 @@ if (name == 'help') {
 }
 
 var objPath = dir + '/' + name + '.js';
-if (!fs.existsSync(objPath)) {
-    console.log("\nUnknown command: " + name + "\n\n");
-    return;
+try {
+    var fd = fs.openSync(objPath, "r");
+    fs.closeSync(fd);
+} catch (err) {
+    console.log("\nUnknown command: " + name + "\n");
+    process.exit(1);
 }
 
 var rl = readline.createInterface({
