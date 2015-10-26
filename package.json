@@ -15,6 +15,7 @@
     "globalize": "~1.1.0-rc.5",
     "jade": "~1.11.0",
     "merge": "~1.2.0",
+    "minimist": "^1.2.0",
     "moment-timezone": "~0.4.0",
     "morgan": "~1.6.1",
     "node-service-locator": "~0.0.2",
