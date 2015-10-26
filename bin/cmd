@@ -16,8 +16,8 @@ var readline = require('readline');
 
 var dir = path.join(__dirname, '..', 'app', 'commands');
 if (argv['_'].length == 0) {
-    console.log("\nUsage:\tbin/cmd <command> [<options>]\n\n");
-    console.log("Run \"bin/cmd help <command>\" for help\n\n");
+    console.log("\nUsage:\tbin/cmd <command> [<options>]\n");
+    console.log("Run \"bin/cmd help <command>\" for help\n");
     console.log("Available commands:\n");
     fs.readdirSync(dir).forEach(function (name) {
         var rl = readline.createInterface({
