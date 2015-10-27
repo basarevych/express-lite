@@ -39,7 +39,8 @@ module.exports = function (argv, rl) {
                         }
 
                         user.setPassword(UserModel.encryptPassword(password));
-                        user.save()
+
+                        userRepo.save(user)
                             .then(function (userId) {
                                 rl.close();
                                 done();
