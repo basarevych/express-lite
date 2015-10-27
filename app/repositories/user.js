@@ -161,7 +161,7 @@ UserModel.prototype.delete = function (user) {
         return defer.promise;
     }
 
-    var db = repo.getSqlite();
+    var db = this.getSqlite();
 
     var del = db.prepare(
         "DELETE "
