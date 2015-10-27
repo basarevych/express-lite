@@ -177,6 +177,7 @@ UserModel.prototype.delete = function (user) {
                 process.exit(1);
             }
 
+            del.finalize();
             db.end();
             user.setId(null);
 
